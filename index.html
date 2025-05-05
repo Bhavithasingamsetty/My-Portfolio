@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhavitha's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>Check out my projects and contact me!</p>
+    
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navbar:", error));
+    </script>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="main-content">
+            
+          
+        <div class="about-container">
+            <!-- Left Side: Profile Image -->
+            <div class="about-image">
+                <img src="images/homepic.jpg" alt="Profile Picture">
+            </div>
+
+            <!-- Right Side: About Content -->
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>
+                    I’m a developer with a strong passion for both data analysis and web development. I enjoy working with data to uncover insights and build full-stack web applications that are fast, responsive, and user-friendly. 
+                    My experience spans building AI-powered systems using Python and Flask, designing REST APIs, managing databases with MySQL, and creating interactive frontends using HTML, CSS, and JavaScript. 
+                    Whether it’s analyzing data, developing backend logic, or bringing a web interface to life, I focus on building practical, real-world solutions that make an impact.
+
+                </p>
+
+                <!-- Buttons for Navigation -->
+                <div class="tab-buttons">
+                    <button class="tab-button" onclick="openTab(event, 'education')">Education</button>
+                    <button class="tab-button" onclick="openTab(event, 'skills')">Skills</button>
+
+                </div>
+
+                <!-- Tab Sections -->
+                <div id="education" class="tab-content active-tab">
+                    <h3> AUG 2023 - MAY 2025</h3>
+                    <p>
+                        <strong  class="degree" > Master's in Computer Science </strong> - <span class="university " >Oklahoma State University </span></p>
+                    <h3> AUG 2018 - AUG 2022</h3>
+                    <p>
+                        <strong class="degree">Bachelor of Technology </strong> - <span class ="university" >Andhra Loyola Institute of Engineering and Technology </span></p>
+                </div>
+
+              
+                  <div id="skills" class="tab-content">
+                    <div class="video-container" style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%; overflow: hidden;">
+                        <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto;">
+                            <source src="./videos/Skills Incred .mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                
+                            
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
