@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM Serif Text&display=swap');
+
+
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+
+
+/* Navbar background */
+nav {
+    background: #000; 
+}
+
+.main-content {
+    padding-top: 80px;
+  }
+  
+
+body {
+    background: #000; /* Black background */
+    color: #fff; /* Text color for readability */
+}
+
+/* Ensure all sections also have a black background */
+#header {
+    background: #000;
+}
+
+
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 80%; /* Adjust image size for mobile */
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+}
+
+
+
+/* About Section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+    gap: 50px;
+}
+
+/* Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Profile Image */
+.about-image img {
+    width: 350px;
+    padding-top: 50px;
+    height: auto;
+    border-radius: 10px 10px 10px 10px; /* Applies to all corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+/* About Content */
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content h3 {
+    font-size: medium;
+    color: rgb(182, 236, 187);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.degree {
+    color: whitesmoke; 
+    font-weight: bold;
+}
+
+.university {
+    color: #4A90E2; /* Blue for university */
+    font-style: italic;
+}
+
+
+/* Tab Buttons */
+.tab-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.tab-button {
+    background: #7D1C4A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab-button:hover {
+    background: black;
+}
+
+
+.tab-content {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Prevents stretching */
+    word-wrap: break-word; /* Ensures long text wraps */
+    white-space: normal; /* Allows text wrapping */
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: black;
+    border-radius: 8px;
+    overflow:wrap;
+}
+
+/* Show Active Tab */
+.active-tab {
+    display: block;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .tab-buttons {
+        flex-direction: column;
+    }
+}
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        width: 80%; /* Adjust image size for mobile */
+        margin-bottom: 20px;
+    }
+    .about-content {
+        text-align: center;
+    }
+
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 500px; /* Increases the space behind the video */
+        overflow: hidden;
+        margin: 30px auto; /* Adds more spacing around the video */
+        padding: 20px; /* Adds spacing inside the container */
+        position: relative;
+        background-color: transparent;
+    }
+    
+    .video-container video {
+        width: 90%; /* Slightly increase width */
+        max-width: 950px; /* Increase max size */
+        height: auto;
+        border-radius: 10px;
+        object-fit: contain;
+    }
+    
+    #skills {
+        padding: 40px 0; /* Increase top and bottom spacing */
+        margin-bottom: 50px; /* Adds more space under the video */
+    }
+    
+    @media (min-width: 1024px) {
+    .video-container {
+        min-height: 550px; /* More height on larger screens */
+    }
+}
+
+
+    
+   
+    }
+    

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        // Load navbar.html dynamically
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navbar:", error));
+    </script>
+
+    <!-- 🟢 Header Section -->
+    <div id="header">
+        <div class="header-content">
+            <h1 class="gradient-text animate-text">Hi, I'm Bhavitha Singamsetty</h1>
+
+
+
+            <p class="intro-text animate-subtitle">A Full-Stack Developer & UI/UX Enthusiast.</p>
+        </div>
+        
+
+        <img src="./images/pp2.jpg" alt="Profile Picture" class="header-image">
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+document.addEventListener("DOMContentLoaded", function () {
+    let isNavigated = false; // Prevent multiple triggers
+    let currentPage = window.location.pathname.split("/").pop(); // Get current page filename
+
+    function smoothRedirect(targetPage) {
+        document.body.style.transition = "opacity 0.8s"; 
+        document.body.style.opacity = "0"; // Fade out effect
+
+        setTimeout(() => {
+            window.location.href = targetPage; // Redirect after fade effect
+        }, 800);
+    }
+
+    
+    window.addEventListener("wheel", function (event) {
+        if (isNavigated) return; // Prevent multiple redirects
+
+        let scrollPosition = window.scrollY;
+        let documentHeight = document.documentElement.scrollHeight;
+        let windowHeight = window.innerHeight;
+
+        if (currentPage === "home.html") {
+            if (event.deltaY > 0) {
+                // Scroll down from home → about.html
+                isNavigated = true;
+                smoothRedirect("about.html");
+            }
+        } else if (currentPage === "about.html") {
+            if (event.deltaY < 0) {
+                // Scroll up from about → home.html
+                isNavigated = true;
+                smoothRedirect("home.html");
+            } else if (event.deltaY > 0) {
+                // Scroll down from about → next page (e.g., contact.html)
+                isNavigated = true;
+                smoothRedirect("project.html");
+            }
+        }
+    });
+
+    // Touch support for mobile
+    let touchStartY = 0;
+    window.addEventListener("touchstart", function (event) {
+        touchStartY = event.touches[0].clientY;
+    });
+
+    window.addEventListener("touchmove", function (event) {
+        if (isNavigated) return; // Prevent multiple redirects
+
+        let touchEndY = event.touches[0].clientY;
+
+        if (currentPage === "home.html") {
+            if (touchStartY - touchEndY > 50) {
+                // Swipe up from home → about.html
+                isNavigated = true;
+                smoothRedirect("about.html");
+            }
+        } else if (currentPage === "about.html") {
+            if (touchEndY - touchStartY > 50) {
+                // Swipe down from about → home.html
+                isNavigated = true;
+                smoothRedirect("home.html");
+            } else if (touchStartY - touchEndY > 50) {
+                // Swipe up from about → contact.html
+                isNavigated = true;
+                smoothRedirect("project.html");
+            }
+        }
+    });
+});

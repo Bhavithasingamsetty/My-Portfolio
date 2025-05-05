@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+    body {
+      margin: 0;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      padding-top: 120px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f61;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    .experience-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .experience {
+      background-color: #1f1f1f;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .experience h2 {
+      color: #00ffe1;
+      font-size: 1.3em;
+      margin-bottom: 8px;
+    }
+
+    .experience h3 {
+      font-size: 1.4em;
+      color: #aaaaaa;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .experience p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    .experience ul {
+  padding-left: 20px;
+  color: #dddddd;
+  line-height: 1.8;
+  font-size: 1.15em; /* Increased font size */
+}
+
+
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 40px auto;
+      padding: 12px 24px;
+      background-color: #00ffe1;
+      color: #0e0e0e;
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00bfa5;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+
+  <h1>Professional Experience</h1>
+
+  <div class="experience-container">
+
+    <div class="experience">
+        <h2> Graduate Research Assistant</h2>
+        <h3>Oklahoma State University — Jan 2025 to Present</h3>
+        <p>
+          Built a real-time web application using Flask and Django to visualize and analyze data from a 6×6 pressure sensor grid, enabling upscaling to 32×32 heatmaps via a custom SRGAN model (PyTorch).
+          <ul>
+            <li>Developed RESTful APIs for real-time sensor data ingestion, model inference, and image rendering.</li>
+            <li>Integrated sensor data using SSH from Raspberry Pi, demonstrating hardware-software integration and Linux networking.</li>
+            <li>Utilized MySQL to store historical data, supporting scalable and optimized querying.</li>
+            <li>Created a responsive UI dashboard to show 6×6 sensor inputs, 32×32 upscaled output, and key metrics (max/total pressure).</li>
+            <li>Reduced system inference latency by 20% through backend optimization.</li>
+          </ul>
+        </p>
+      </div>
+
+      <div class="experience">
+        <h2>Graduate Teaching Assistant </h2>
+        <h3>Oklahoma State University - Aug 2024 to Dec 2024</h3>
+        <p>
+            <strong>Taught 130+ undergraduate students</strong>
+          <ul>
+            <li>Conducted lab sessions and recitations on Microsoft Excel, covering data analysis, visualization, and automation using VBA.</li>
+            <li>Provided one-on-one and group tutoring to assist students with VBA logic, error debugging, and Excel-based application design.</li>
+            <li>Created walkthrough guides and cheat sheets to simplify advanced Excel features, improving average student performance by 30%.</li>
+            <li>Encouraged peer collaboration through team-based projects and presentations on real-world data use cases.</li>
+            <li>Led exam review sessions, ensuring clear understanding of Excel business computing tools and logic building in VBA.</li>
+            <li>Collaborated with faculty to align lab goals with course content and streamline assessment and grading strategies.</li>
+            <li>Utilized Excel to maintain gradebooks, generate performance dashboards, and share insights with students and instructors.</li>
+        </ul>
+        
+        </p>
+    </div>
+
+      
+
+      <div class="experience">
+        <h2>Cloud Engineer Intern</h2>
+        <h3>Spektra Systems, India — Mar 2022 to Jun 2022</h3>
+        <p>
+          Deployed and managed critical Microsoft Azure services like Virtual Machines, Blob Storage, SQL Databases, and App Services.
+          <ul>
+            <li>Automated infrastructure provisioning with Terraform and ARM templates, reducing deployment time by 40%.</li>
+            <li>Configured IAM roles, virtual networks, and monitored usage via Azure CLI and Portal.</li>
+            <li>Assisted in cost optimization, load balancing, and setting up multi-region failover systems.</li>
+            <li>Supported DevOps pipelines and CI/CD workflows for cloud-native app deployments.</li>
+          </ul>
+        </p>
+      </div>
+      
+
+    <div class="experience">
+        <h2>Data Science Intern</h2>
+        <h3>Exposys Data Labs — Jul 2021 to Sep 2021</h3>
+        <p>
+          Worked on customer segmentation using K-Means clustering to enhance business insights and marketing strategy development.
+          <ul>
+            <li>Performed data preprocessing, feature engineering, and exploratory data analysis (EDA) using Python and pandas.</li>
+            <li>Applied unsupervised learning techniques to segment customers based on spending behavior and income.</li>
+            <li>Visualized clusters using Matplotlib and Seaborn to aid strategic decision-making for targeted marketing.</li>
+            <li>Documented findings and presented results through an interactive PDF report.</li>
+            <li>Strengthened skills in Python, Scikit-learn, and data storytelling through real-world business data.</li>
+          </ul>
+        </p>
+      </div>
+
+  </div>
+
+  <a href="about.html" class="back-button">⬅ Back to About</a>
+
+</body>
+</html>

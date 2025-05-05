@@ -1,0 +1,196 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM Serif Text&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+
+
+/* Adjust Header Section */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 100px 50px 60px; /* Adds left & right padding */
+}
+
+/* Text Block Styling */
+.header-content {
+    max-width: 50%; /* Prevents text from stretching too wide */
+    padding-left: 5%; /* Moves text slightly to the right */
+}
+
+/* Heading Styling */
+.header-content h1 {
+    font-size: 2.8rem; /* Bigger and bolder */
+    font-weight: bold;
+    margin-bottom: 15px; /* Space between heading & subheading */
+    line-height: 1.2;
+}
+
+/* Subheading Styling */
+.header-content p {
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Increase Image Size */
+.header-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    #header {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .header-content {
+        max-width: 100%;
+    }
+
+    .header-image {
+        max-width: 150%;
+        height:100%;
+    }
+}
+body {
+    background: #000; /* Black background */
+    color: #fff; /* Text color for readability */
+}
+
+/* Ensure all sections also have a black background */
+#header {
+    background: #000;
+}
+
+
+
+
+/* Navbar background */
+nav {
+    background: #000; 
+}
+
+/* Apply New Font to About Text */
+.intro-text {
+    font-family: 'Roboto', sans-serif; /* Change this if you choose another font */
+    font-size: 18px;
+    font-weight: 400;
+    color: #d9d9d9; /* Light Gray for readability */
+    line-height: 1.6;
+    max-width: 90%;
+    margin-top: 10px; /* Adds spacing below the name */
+}
+
+
+
+
+/* Apply Great Vibes Font with Blue-to-White Gradient */
+.gradient-text {
+    font-family: 'DM Serif Text', cursive;
+    font-weight: 400;
+    font-size: 3rem; /* Adjust size as needed */
+    background: linear-gradient(90deg, #4A90E2, #A0C4FF, #ffffff); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px; /* Adds spacing for elegance */
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Start 100px to the left */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Move to original position */
+    }
+}
+
+/* Apply Slide In Left Animation to Name */
+.animate-text {
+    animation: slideInLeft 2s ease-in-out forwards;
+}
+
+/* Apply Slide In Left Animation to Subtitle */
+.animate-subtitle {
+    animation: slideInLeft 3s ease-in-out forwards;
+}

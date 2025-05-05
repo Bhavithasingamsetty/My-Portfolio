@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OSU Laptop Circulation System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.6;
+      padding-top: 120px;
+    }
+
+    h1 {
+      color: #ff6f61;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.4em;
+    }
+
+    .section-title {
+      color: #00ffe1;
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+
+    p {
+  font-size: 23px;
+  line-height: 1.6;
+}
+
+
+    .center-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    ul {
+      padding-left: 1.5em;
+      font-size: 1.1em;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    /* === PDF Embed Styling === */
+    .pdf-container {
+      max-width: 900px;
+      height: 600px;
+      margin: 40px auto;
+      border: 2px solid #2a2a2a;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
+
+    @media (max-width: 768px) {
+      nav ul {
+        justify-content: center;
+      }
+      h1 {
+        font-size: 1.6em;
+      }
+      .pdf-container {
+        height: 400px;
+        margin: 20px;
+      }
+
+      
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+
+  <h1>OSU Laptop Circulation System</h1>
+
+  <div class="center-content">
+    <div class="section-title">About This Project</div>
+    <p>
+      This project is a web-based OSU Laptop Circulation System that allows users to log in, reserve laptops for specific dates, and manage their bookings. Users can register for membership, input their reservation period (checkout and due date), and the system automatically calculates the total amount due. Admins have broader control: they can view all reservations, approve or reject bookings, post notices, and manage user records.
+    </p>
+
+    <div class="section-title">Tech Stack</div>
+    <ul>
+      <li><strong>Editor:</strong> Visual Studio Code</li>
+      <li><strong>Languages:</strong> PHP, HTML, CSS, JavaScript</li>
+      <li><strong>Database:</strong> MySQL</li>
+    </ul>
+
+    <!-- ✅ Embedded PDF Viewer -->
+  <div class="pdf-container">
+    <iframe src="REPORT.pdf" type="application/pdf"></iframe>
+  </div>
+  </div>
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+
+</body>
+</html>

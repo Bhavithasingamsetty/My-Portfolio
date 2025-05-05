@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"/>
+  <link rel="stylesheet" href="project.css"/>
+</head>
+<body>
+
+  <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+
+  <!-- ✅ Page Title -->
+  <h1>My Projects</h1>
+
+  <!-- ✅ Project Tiles -->
+  <div class="project-gallery">
+    <a href="srgan.html" class="project-tile">
+      <img src="images/SRGAN_thumbnail.png" alt="SRGAN Project"/>
+    </a>
+
+    <a href="emotion-detection.html" class="project-tile">
+      <img src="images/emotion-detection-thumbnail.png" alt="Emotion Detection"/>
+    </a>
+
+    <a href="customer-segmentation.html" class="project-tile">
+      <img src="images/customer-segmentation-thumbnail-2.png" alt="Customer Segmentation"/>
+    </a>
+    <a href="facemask.html" class="project-tile">
+        <img src="images/facemask-thumbnail.png" alt="Facemask and social distancing Projects"/>
+      </a>
+      <a href="OSU-laptop.html" class="project-tile">
+        <img src="images/OSU laptop thumbnail.png" alt="DBMS projects"/>
+      </a>
+
+    <a href="Feast_Factory.html" class="project-tile">
+      <img src="images/MAD tumbnail.png" alt="Mobile Projects"/>
+    </a>
+  </div>
+
+  <a href="https://github.com/Bhavithasingamsetty?tab=repositories" target="_blank" class="github-button">🔗 View More Projects on GitHub</a>
+
+
+</body>
+</html>

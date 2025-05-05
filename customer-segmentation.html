@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Segmentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+       /* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+    body {
+      margin: 0;
+      padding-top: 120px;
+      background-color: #0e0e0e;
+      color: #ffffff;
+    }
+    
+
+    /* === Page Title === */
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      color: #ff6f61;
+      margin-top: 20px;
+    }
+
+    /* === Section Header === */
+    h2 {
+      color: #00ffe1;
+      font-size: 1.5em;
+      margin: 30px auto 10px auto;
+      max-width: 900px;
+    }
+
+    /* === Paragraph Styling === */
+    .description {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+
+    /* === PDF Embed Styling === */
+    .pdf-container {
+      max-width: 900px;
+      height: 600px;
+      margin: 40px auto;
+      border: 2px solid #2a2a2a;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
+
+    @media (max-width: 768px) {
+      nav ul {
+        justify-content: center;
+      }
+      h1 {
+        font-size: 1.6em;
+      }
+      .pdf-container {
+        height: 400px;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+
+
+  <!-- ✅ Page Title -->
+  <h1>Customer Segmentation using K-Means</h1>
+
+  <!-- ✅ About Section -->
+  <h2>About This Project</h2>
+  <p class="description">
+    This project applies K-Means Clustering to segment customers based on features like annual income and spending score. 
+    By identifying customer groups, businesses can better target marketing strategies and improve customer satisfaction. 
+    The dataset used is the Mall Customer Segmentation Data from Kaggle. Exploratory Data Analysis (EDA) was performed 
+    before clustering, and visualizations were generated using Matplotlib and Seaborn.
+  </p>
+
+  <!-- ✅ Embedded PDF Viewer -->
+  <div class="pdf-container">
+    <iframe src="datasci intern/Customer segmentation code.pdf" type="application/pdf"></iframe>
+  </div>
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavitha's Feast Factory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+       /* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      padding: 60px 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f61;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+
+    .github-link {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    color: #5ac8fa;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+
+  .github-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #5ac8fa;
+  }
+
+    h2 {
+      color: #00ffe1;
+      font-size: 1.7em;
+      margin-bottom: 10px;
+      margin-top: 50px;
+    }
+
+    .about-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+    .description {
+      max-width: 1000px;
+      margin: auto;
+      font-size: 1.15em;
+      line-height: 1.8;
+      color: #dddddd;
+      text-align: justify;
+    }
+
+    .screenshot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .screenshot-grid img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+
+    .back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
+    @media (max-width: 768px) {
+      .screenshot-grid img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+   <!-- ✅ Navbar loads here -->
+   <div id="navbar-placeholder"></div>
+
+   <script>
+     fetch("navbar.html")
+       .then(response => response.text())
+       .then(data => {
+         document.getElementById("navbar-placeholder").innerHTML = data;
+       })
+       .catch(error => console.error("Error loading navbar:", error));
+   </script>
+  <div class="about-section"></div>
+  <h1>Bhavitha's Feast Factory</h1>
+  <a class="github-link" href="https://github.com/Bhavithasingamsetty/Bhavitha-s-Feast-Factory" target="_blank">🔗 GitHub Repository </a>
+  
+  
+  <div class="about-section">
+  <h2>About This Project</h2>
+  <div class="description">
+    This mobile application, <strong>Bhavitha's Feast Factory</strong>, is a restaurant finance management app designed to help restaurant owners track income and expenses across various business activities. It offers a user-friendly dashboard with real-time profit visualization, easy access to income and expense entries, and tools to analyze financial health.<br><br>
+
+    With sections like Income Sources and Expense Categories, users can:
+    <ul>
+      <li>Add, edit, and view multiple streams like dine-in, takeaway, private dining, etc.</li>
+      <li>Manage detailed expenses such as salaries, utilities, rent, marketing, etc.</li>
+      <li>Automatically calculate and display total income, total expenses, and profit percentage.</li>
+      <li>Use a clean iOS interface that ensures easy navigation and a responsive experience.</li>
+    </ul>
+
+    This application is ideal for small restaurant owners aiming to streamline their financial monitoring with a clean and efficient mobile interface.
+  </p>
+
+  <h2>Project Screenshots</h2>
+  <div class="screenshot-grid">
+    <img src="images/Feast_Factory/image-01.png" alt="Home Page Screenshot">
+    <img src="images/Feast_Factory/image-02.png" alt="Profit and Utilities Screenshot">
+    <img src="images/Feast_Factory/image-03.png" alt="Income Sources Screenshot">
+    <img src="images/Feast_Factory/image-04.png" alt="Expense Sources Screenshot">
+    <img src="images/Feast_Factory/image-05.png" alt="New Income Source Screenshot">
+  </div>
+</div>
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+</body>
+</html>

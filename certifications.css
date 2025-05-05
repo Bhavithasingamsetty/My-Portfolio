@@ -1,0 +1,215 @@
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+
+.main-content {
+    padding-top: 80px;
+  }
+
+
+/* General Styles */
+body {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 90px;
+}
+
+/* Section Heading */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6f61 /* Gold color */
+}
+
+/* Certification Container */
+.cert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Individual Certification */
+.certification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Certificate Info */
+.cert-text {
+    flex: 1;
+    padding: 10px;
+}
+
+.cert-text h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.cert-text p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Certificate Image */
+.cert-img {
+    flex-shrink: 0;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cert-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cert-img img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+   
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Full Image */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+    padding:60px;
+    border-radius: 10px;
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 12px 24px;
+    background-color: #00ffe1;
+    color: #0e0e0e;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-button:hover {
+    background-color: #00bfa5;
+    color: #fff;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certification {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .cert-img {
+        width: 90%;
+        height: auto;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Face Mask & Social Distancing Detection</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"/>
+  <style>
+    /* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+
+    
+
+    body {
+      margin: 0;
+      background-color: #0e0e0e;
+      color: white;
+      padding-top: 120px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f61;
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      font-size: 1.8rem; /* Increased */
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      color: #00ffe1;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .section p, .section ul {
+  font-size: 1.15rem; /* Increased */
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.section ul {
+  padding-left: 1.2rem;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+   
+.screenshot-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.screenshot-grid img {
+    width: 45%;             /* Enlarged from 40% */
+    max-width: 540px;   
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.screenshot-grid img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .screenshot-grid img {
+    width: 90%;
+  }
+}
+
+    .architecture-img {
+  width: 95%;
+  max-width: 800px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+    <!-- ✅ Navbar loads here -->
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+    </script>
+  
+
+  <!-- ✅ About This Project -->
+  <section class="section">
+    <h1>Social Distancing and Face Mask Detection</h1>
+
+    <h2>About This Project</h2>
+    <p>
+      This project is an integrated deep learning-based solution for monitoring social distancing and detecting face masks in public places.
+      It leverages real-time CCTV footage to detect individuals using YOLOv5 and checks for face mask usage using a Stacked ResNet-50 model.
+      Violations in distance are calculated using the Euclidean distance formula. Alerts are issued via voice and emails when violations exceed the limit.
+    </p>
+
+    <div class="section">
+        <h2>Architecture</h2>
+        <img src="images/facemaskoutput-3.png" alt="System Architecture Diagram" class="architecture-img">
+      </div>
+      
+  </section>
+
+  <div class="section">
+    <h2>Project Screenshots</h2>
+    <div class="screenshot-grid">
+      <img src="images/facemaskoutput-2.png" alt="Screenshot 1">
+      <img src="images/facemaskoutput-1.png" alt="Screenshot 2">
+      
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+  
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+
+</body>
+</html>

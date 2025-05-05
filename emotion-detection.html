@@ -1,0 +1,224 @@
+
+<style>
+    /* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  padding-top: 120px; /* ✅ Fixes the overlap */
+}
+
+
+  h1 {
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .github-link {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    color: #5ac8fa;
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+
+  .github-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px #5ac8fa;
+  }
+
+  .section-heading {
+    color: #00ffe1;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 4px;
+  }
+
+  .project-content {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .project-content p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.project-content li {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+  ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin-top: 10px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .tech-stack {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .screenshot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .screenshot-grid img {
+    width: 50%;
+    max-width:500px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+
+  .screenshot-grid img:hover {
+  transform: scale(1.03);
+}
+  .back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+
+  @media (max-width: 768px) {
+    .screenshot-grid img {
+      width: 90%;
+    }
+  }
+</style>
+
+<body>
+
+    <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+
+
+  <h1>Real-Time Facial Emotion Detection</h1>
+  <a class="github-link" href="https://github.com/Bhavithasingamsetty/emotion-detection" target="_blank">🔗 GitHub Repository </a>
+    
+
+  <div class="project-content">
+    <div class="section-heading">About This Project</div>
+    <p>
+      This project focuses on real-time facial emotion detection using deep learning. It utilizes a Convolutional Neural Network (CNN) model trained on the FER-2013 dataset to classify emotions such as <strong>happy</strong>, <strong>sad</strong>, <strong>angry</strong>, <strong>fear</strong>, <strong>surprise</strong>, <strong>disgust</strong>, and <strong>neutral</strong>. The system captures video input from a webcam, detects faces using OpenCV, and then predicts emotions using the trained model.
+    </p>
+
+    <div class="section-heading">Key Features</div>
+    <ul>
+      <li>Real-time webcam integration for facial detection</li>
+      <li>Emotion classification using a trained CNN model</li>
+      <li>Live bounding box and label overlay on detected faces</li>
+      <li>Trained on the FER-2013 dataset with high validation accuracy</li>
+    </ul>
+
+    <div class="section-heading">Tech Stack</div>
+    <div class="tech-stack">
+      <ul>
+        <li>Python, TensorFlow/Keras</li>
+        <li>OpenCV for face detection</li>
+        <li>FER-2013 dataset for training</li>
+        <li>Jupyter Notebook / Streamlit / Flask (based on your implementation)</li>
+      </ul>
+    </div>
+
+    <div class="section-heading">Project Screenshots</div>
+    <div class="screenshot-grid">
+      <img src="images/angry.png" alt="Emotion Detection Screenshot 1">
+      <img src="../images/fear.png" alt="Emotion Detection Screenshot 2">
+      <img src="../images/happy,surprise.png" alt="Emotion Detection Screenshot 3">
+      <img src="../images/sad,happy.png" alt="Emotion Detection Screenshot 4">
+      <img src="../images/surprise.png" alt="Emotion Detection Screenshot 5">
+    </div>
+  </div>
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+
+</body>

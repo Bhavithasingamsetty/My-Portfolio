@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="certifications.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <script>
+        // Load navbar.html dynamically
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navbar:", error));
+    </script>
+
+
+
+<div class="main-content">
+    <section id="certifications">
+       
+        <h2>📜 My Certifications</h2>
+
+        <div class="cert-container">
+           
+            <!-- Certification 1 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Foundations of User Experience (UX) Design</h3>
+                    <p>Issued by: <strong>Google</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Foundations of User Experience (UX) Design.jpeg" alt="Google UX Design Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Certification 2 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Foundations: Data, Data, Everywhere</h3>
+                    <p>Issued by: <strong>Google</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Mar20231.jpeg" alt="Google Data Analytics Certificate" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Certification 3 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Introduction to User Experience Design</h3>
+                    <p>Issued by: <strong>Georgia Institute of Technology</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Introduction to User Experience Design.jpeg" alt="UI/UX Design Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Certification 4 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>PHP for Beginners</h3>
+                    <p>Issued by: <strong>Great Learning</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/PHP.jpg" alt="PHP Certificate">
+                </div>
+            </div>
+
+            <!-- Certification 5 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Python Data Structures</h3>
+                    <p>Issued by: <strong>University of Michigan</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Python Data Structures.jpeg" alt="Python Data Structures Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Programming for Everybody (Getting Started with Python)</h3>
+                    <p>Issued by: <strong>Univeristy of Michigan</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/coursera py1_page-0001.jpg" alt="Python Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Certification 6 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>The Joy of Computing Using Python</h3>
+                    <p>Issued by: <strong>NPTEL</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/The Joy of Computing Using Python.jpg" alt="NPTEL Python Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- Certification 7 -->
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Programming in Java</h3>
+                    <p>Issued by: <strong>NPTEL</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Programming in Java.jpg" alt="Java Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <div class="certification">
+                <div class="cert-text">
+                    <h3>Web Development Training</h3>
+                    <p>Issued by: <strong>InternShala</strong></p>
+                </div>
+                <div class="cert-img">
+                    <img src="Certificates/Web Development Training - Certificate of Completion.jpg" alt="Web Developement Certificate"  onclick="openModal(this.src)">
+                </div>
+            </div>
+        </div>
+       
+
+    </section>
+</div>
+
+
+    <!-- Modal Popup for Enlarged Image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <script>
+        function openModal(imgElement) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("fullImage");
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        function closeModal() {
+          
+            document.getElementById("imageModal").style.display = "none";
+        }
+   
+    </script>
+
+    <script src="script.js"></script>
+
+    <a href="about.html" class="back-button">⬅ Back to About</a>
+
+</body>
+</html>

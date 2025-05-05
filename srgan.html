@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRGAN Project</title>
+  <link rel="stylesheet" href="../project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+        /* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:auto;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Video Logo Styling */
+.logo video {
+    height: 100px; /* Adjust size */
+    width: auto;
+    border-radius: 5px; /* Optional rounded edges */
+}
+
+/* Navbar List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Ensures items are centered initially */
+    gap: 50px; /* Adjusts spacing between menu items */
+    width: 60%; /* Controls the width of the navbar list */
+}
+
+/* Navbar Items */
+nav ul li {
+    display: inline;
+}
+
+/* Navbar Links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: #FD8B51 /* Highlight color */
+}
+    body {
+  background-color: #0e0e0e;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  padding-top: 120px; /* ✅ Fixes the overlap */
+}
+
+
+    h1 {
+  color: #ff6f61; /* Royal Purple */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+    .github-link {
+      display: block;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+      color: #5ac8fa;
+      text-decoration: none;
+    }
+
+    .github-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 5px #5ac8fa;
+    }
+
+    .project-detail p {
+  max-width: 900px;
+  margin: auto;
+  white-space: pre-line;
+  font-size: 1.2em;   /* 🔼 Increased from default to 1.2em */
+  line-height: 1.8;   /* 🔼 More comfortable line spacing */
+  color: #dddddd;     /* Optional: slightly softer white for readability */
+}
+
+
+    .section-heading {
+      color: #00ffe1;
+      font-size: 1.5em;
+      font-weight: 600;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    .screenshot-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .screenshot-grid img {
+      width: 30%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .screenshot-grid img {
+        width: 90%;
+      }
+    }
+
+    .highlight-section {
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      background: #1f1f1f;
+      padding: 60px 20px;
+      margin-top: 60px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .highlight-section h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #00ffe1;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight-section img {
+      width: 95%;
+      max-width: 1000px;
+      border-radius: 12px;
+      border: 3px solid #2a2a2a;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-section img:hover {
+      transform: scale(1.01);
+    }
+
+    .highlight-section p {
+      color: #bbbbbb;
+      font-size: 1em;
+      margin-top: 12px;
+    }
+      .back-button {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 60px auto;
+  padding: 12px 24px;
+  background-color: #00ffe1;
+  color: #0e0e0e;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00bfa5;
+  color: #fff;
+}
+</style>
+</head>
+<body>
+    <!-- ✅ Navbar loads here -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+  </script>
+  <section class="project-detail">
+    <h1>Pressure Map Upscaling using SRGAN</h1>
+    <a class="github-link" href="https://github.com/bdang25/OSU-Pressure-Mapping-Research-Code" target="_blank">🔗 GitHub Repository</a>
+
+    <p>
+<span class="section-heading"> Real-Time Pressure Mapping System with SRGAN & Raspberry Pi</span>
+
+Designed and developed a complete end-to-end system that captures real-time seat pressure data using Raspberry Pi hardware and visualizes it through a dynamic, web-based UI. The system uses a Super-Resolution GAN (SRGAN) to upscale low-resolution sensor input (6×6) into a detailed 32×32 pressure map.
+
+<span class="section-heading"> Key Features</span>
+<strong>Hardware-Sensor Integration:</strong> Connected a 6×6 force sensor matrix to a Raspberry Pi using ADS1115 and TCA9548A to collect live analog pressure data.  
+<strong>Real-Time Data Pipeline:</strong> Raspberry Pi reads pressure values and transfers them as 6x6_data.csv to the laptop via SSH/SCP every 2 seconds.  
+<strong>AI-Based Pressure Upscaling:</strong> Trained a PyTorch-based SRGAN model to enhance low-resolution pressure maps to high-resolution (32×32) images in real time.  
+<strong>Interactive UI for Visualization:</strong> Developed a responsive web interface using HTML, CSS, and JavaScript to:  
+• Display both the original 6×6 and upscaled 32×32 pressure maps side by side  
+• Refresh images automatically every minute  
+• Show timestamp of last update, maximum force, and optionally total pressure  
+<strong>Cross-Device Hosting:</strong> Flask server hosted locally, allowing access from phones, tablets, and other devices on the same network.
+
+<span class="section-heading"> Technologies Used</span>
+<strong>Hardware:</strong> Raspberry Pi, ADS1115 ADC, TCA9548A  
+<strong>Software:</strong> Python, PyTorch (SRGAN), Flask, HTML, CSS, JavaScript  
+<strong>Data Handling:</strong> NumPy, Matplotlib, CSV  
+<strong>Communication:</strong> SSH, SCP (for real-time Pi → laptop transfer)
+    </p>
+
+    <div class="highlight-section">
+      <h2>🔍 SRGAN: 6×6 Input → Upscaled Output → Ground Truth</h2>
+      <img src="../images/SRGAN_output-1.png" alt="SRGAN Comparison Image">
+      <p>Visual comparison of raw 6×6 input, SRGAN-enhanced 32×32 output, and the actual 32×32 ground truth pressure map.</p>
+    </div>
+
+  </section>
+  <a href="project.html" class="back-button">⬅ Back to Projects</a>
+
+</body>
+</html>
