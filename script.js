@@ -43,24 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
             openModal(this.src);
 
 
-            const projectData = {
-  project1: {
-    github: "https://github.com/your-username/portfolio-website",
-    images: [
-      "project1/1.jpg",
-      "project1/2.jpg",
-      "project1/3.jpg"
-    ]
-  },
-  project2: {
-    github: "https://github.com/your-username/data-dashboard",
-    images: [
-      "project2/1.jpg",
-      "project2/2.jpg"
-    ]
-  }
-  // Add more projects similarly
-};
 
 function openGallery(projectKey) {
   const modal = document.getElementById("projectModal");
